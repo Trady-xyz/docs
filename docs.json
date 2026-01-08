@@ -82,7 +82,31 @@
         ]
       },
       {
-        "tab": "Trady"
+        "tab": "Trady",
+        "groups": [
+          {
+            "group": "Getting started",
+            "pages": [
+              "trady/index",
+              "trady/getting-started",
+              "trady/create-account"
+            ]
+          },
+          {
+            "group": "Funding",
+            "pages": [
+              "trady/deposit",
+              "trady/withdraw"
+            ]
+          },
+          {
+            "group": "Account management",
+            "pages": [
+              "trady/account-settings",
+              "trady/security-settings"
+            ]
+          }
+        ]
       }
     ]
   },
