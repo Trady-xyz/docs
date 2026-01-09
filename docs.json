@@ -88,6 +88,7 @@
       {
         "tab": "Trady Learn Center",
         "pages": [
+          "trady-learn-center/spot",
           "trady-learn-center/getting-started",
           "trady-learn-center/about-trady",
           "trady-learn-center/architecture",
