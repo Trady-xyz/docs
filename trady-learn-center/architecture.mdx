@@ -1,0 +1,82 @@
+---
+title: "Trady Architecture"
+description: "Trade across multiple blockchains effortlessly with Trady’s aggregated assets, gas abstraction, and secure, high-performance transaction system."
+---
+
+Trady’s cross-chain architecture enables seamless, intent-driven transactions across multiple blockchains. It is built around a modular, secure, and high-performance system where each component plays a specific role in routing, verifying, and executing user operations.
+
+It consists of key components working together: 
+
+- Trady Backend: The central service that receives requests, determines optimal routing, and coordinates with solvers and bundlers across different chains. 
+- Solver Network: Liquidity providers and routing aggregators that execute transactions on destination chains and provide optimal execution paths.
+
+### Aggregated Assets
+
+Trady aggregates assets between chains into a unified balance, simplifying cross-chain management and trading.
+
+Aggregated assets are Trady’s unified token representation that combines the same token across multiple blockchain networks into a single asset, instead of tracking it separately on Ethereum, Polygon, and Arbitrum, you simply work with one asset representing all your holdings across supported chains.
+
+You can think of aggregated assets as your **“universal wallet view”** – one asset that automatically manages all your cross-chain token holdings behind the scenes.
+
+### Aggregated USD (USDT + USDC)
+
+Trady unifies your stable holdings into one single USD balance available to spend in a single transaction. Even if you have USDT and USDC fractions across 10 different networks, the combined balance remains fully available to use in one seamless operation.
+
+### Gas-Abstraction
+
+With Trady, you forget not only about bridges, but about gas and gas tokens too.
+
+Trady uses a paymaster service that sponsors on-chain gas fees on behalf of users, enabling gasless transactions and significantly improving the overall experience.
+
+### Transaction Lifecycle
+
+A Trady transaction moves through four coordinated phases. Each phase ensures optimal routing, user safety, and efficient settlement across chains.
+
+#### 1. Initial Request Phase
+
+The process begins when the user submits an intent, for example: **“Swap ETH (from any chain) for SOL on Solana.”**
+
+Trady then:
+
+- Aggregates available balances across different chains.
+- Checks which funds are eligible for spending without altering the user flow.
+- Processes the request and determines the best multi-chain route.
+
+Our system automatically detects how much liquidity the user has on each chain, enabling seamless multi-chain spending within a single intent.
+
+#### 2. Quote Phase
+
+Next, the solver system generates a complete quote, which includes:
+
+- Pricing
+- Estimated gas costs
+- Swap fees
+
+The user:
+
+1. Receives the quote
+2. Reviews the execution details
+3. Signs the operation using their **session key**
+4. Sends the signed operation back to Trady for processing
+
+#### 3. RL Phase
+
+Once Trady receives the signed operation, it is forwarded to our **Risk & Logic (RL) Service**.
+
+The RL Service:
+
+- Verifies that the request is valid
+- Evaluates the security posture of the operation
+- Issues a **security attestation**
+
+Depending on the security assessment, the transaction continues along an appropriate execution path.
+
+#### 4. Execution Phase
+
+Trady submits both the operation and the corresponding security guarantees to the solver.
+
+From here, execution can follow **one of three paths**, depending on:
+
+- The assets involved
+- The security attestation
+- The optimal route determined by the solver
