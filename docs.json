@@ -14,11 +14,13 @@
         {
           "anchor": "Documentation",
           "icon": "book-open-cover",
+          "hidden": true,
           "href": "https://mintlify.com/docs"
         },
         {
           "anchor": "Blog",
           "icon": "newspaper",
+          "hidden": true,
           "href": "https://mintlify.com/blog"
         }
       ]
@@ -26,6 +28,7 @@
     "tabs": [
       {
         "tab": "Guides",
+        "hidden": true,
         "groups": [
           {
             "group": "Getting started",
@@ -63,6 +66,7 @@
       },
       {
         "tab": "API reference",
+        "hidden": true,
         "groups": [
           {
             "group": "API documentation",
@@ -82,18 +86,15 @@
         ]
       },
       {
-        "tab": "Trady"
-      },
-      {
         "tab": "Trady Learn Center",
         "pages": [
           "trady-learn-center/Contact-us",
-          "trady-learn-center/untitled-page-copied-1",
-          "trady-learn-center/untitled-page-copied-4",
-          "trady-learn-center/untitled-page-copied-3",
-          "trady-learn-center/untitled-page-copied-5",
-          "trady-learn-center/untitled-page",
-          "trady-learn-center/untitled-page-copied-6",
+          "trady-learn-center/Markets",
+          "trady-learn-center/about-trady",
+          "trady-learn-center/architecture",
+          "trady-learn-center/getting-started",
+          "trady-learn-center/portfolio",
+          "trady-learn-center/rewards",
           "trady-learn-center/untitled-page-1"
         ]
       }
