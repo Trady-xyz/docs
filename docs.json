@@ -88,11 +88,11 @@
       {
         "tab": "Trady Learn Center",
         "pages": [
-          "trady-learn-center/spot",
           "trady-learn-center/getting-started",
           "trady-learn-center/about-trady",
           "trady-learn-center/architecture",
           "trady-learn-center/Markets",
+          "trady-learn-center/spot",
           "trady-learn-center/portfolio",
           "trady-learn-center/rewards",
           "trady-learn-center/Contact-us"
