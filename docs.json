@@ -30,12 +30,7 @@
         "label": "Trady Platform",
         "href": "https://app.trady.xyz/login"
       }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
-    }
+    ]  
   },
   "contextual": {
     "options": [
