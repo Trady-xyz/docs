@@ -56,5 +56,10 @@
   },
   "appearance": {
     "default": "dark"
+  },
+  "favicon": "/images/fav.svg",
+  "logo": {
+    "light": "/images/light.svg",
+    "dark": "/images/dark.svg"
   }
 }
