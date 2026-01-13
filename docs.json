@@ -61,5 +61,6 @@
   "logo": {
     "light": "/images/light.svg",
     "dark": "/images/dark.svg"
-  }
+  },
+  "description": "Learn how to use Trady step by step. Account setup, deposits, withdrawals, wallet connections, security settings, and managing your profile – all in one place."
 }
